@@ -1,0 +1,60 @@
+html {
+    background-image: url("../img/weather.jpg");
+    background-size: cover;
+}
+
+body {
+    color: #333333;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 900px;
+    margin: 0px auto;
+    
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+   flex-grow: 1;
+}
+footer {
+    color: #4d514d;
+    /* background: #dbdbdb; */
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+footer > p {
+    margin-top: 11px;
+}
+header h1 {
+    margin-bottom: 15px;
+    font-size: 25px
+}
+nav a {
+    color: #080808;
+    margin-right: 15px;
+    text-decoration: none;
+}
+nav a:hover {
+    color: white; 
+}
+.error404 {
+    margin-top: 15px;
+    color: #888888;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+    margin-left: 5px;
+}
