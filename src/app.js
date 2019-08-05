@@ -6,7 +6,7 @@ const weatherUtil = require('./utils/weather.js');
 
 
 const app = express()
-
+const port = process.env.PORT || 3000
 console.log(__dirname)
 console.log(__filename)
 
@@ -101,6 +101,6 @@ app.get('*', (req, res) => {
 })
 
 // express server is listening in port 3000
-app.listen(3000, () => {
-   console.log('Server is up on port 3000');
+app.listen(port, () => {
+   console.log('Server is up on port' + port);
 })

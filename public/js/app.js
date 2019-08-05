@@ -12,7 +12,7 @@ const messageTwo = document.querySelector('#message-2');
 formSelector.addEventListener('submit', (e)=> {
     e.preventDefault();
     const inputValue = e.currentTarget.children[0].value;
-    const url = './weather?address=' + inputValue;
+    const url = '/weather?address=' + inputValue;
 
     messageOne.textContent = 'Loading....';
     messageTwo.textContent = '';
