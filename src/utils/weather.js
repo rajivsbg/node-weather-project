@@ -9,10 +9,12 @@ const getForcast = (lattitude, longitude, callback) => {
         } else if(body.error) {
             callback(body.error, undefined);
         } else {
+            console.log(body);
             const weatherObj = {
                 'temperature': body.currently.temperature,
                 'preciptation': body.currently.precipProbability,
-                'summary': body.currently.summary
+                'summary': body.currently.summary,
+                'humidity': body.currently.humidity
             }
             callback(undefined, weatherObj);
         }

@@ -70,12 +70,12 @@ app.get('/weather', (req, res) => {
         if(error) {
             return res.send({error});
         }
-        weatherUtil.getForcast(lattitude, longitude, (error, { temperature, preciptation, summary } = {} /* object de structure*/)=> {
+        weatherUtil.getForcast(lattitude, longitude, (error, { temperature, preciptation, summary, humidity } = {} /* object de structure*/)=> {
             if(error) {
                 return res.send({error});
             } 
             const weatherObj = {
-                'summary': summary + '. It is currently ' + temperature + ' degree outside. There is a ' + preciptation + '% chance of rain.',
+                'summary': summary + '. It is currently ' + temperature + ' degree outside. There is a ' + preciptation + '% chance of rain and Humidity will be ' + humidity + '%.',
                 'location': place,
                 'address': req.query.address
             }
